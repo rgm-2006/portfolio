@@ -90,9 +90,9 @@ export default function Portfolio() {
               AI/ML Engineer • Full Stack Developer
             </p>
 
-            <h2 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-              Building intelligent systems and scalable AI applications.
-            </h2>
+            <h2 className="text-5xl md:text-7xl font-bold leading-tight mb-6 bg-gradient-to-r from-white via-zinc-300 to-cyan-400 bg-clip-text text-transparent">
+  Building intelligent systems and scalable AI applications.
+</h2>
 
             <p className="text-zinc-400 text-lg leading-relaxed mb-8">
               Information Technology student focused on machine learning,
