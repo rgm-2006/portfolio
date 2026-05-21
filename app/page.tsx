@@ -58,7 +58,7 @@ export default function Portfolio() {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex items-center justify-between mb-20"
+          className="flex items-center justify-between mb-20 sticky top-6 z-50 backdrop-blur-xl bg-zinc-900/40 border border-zinc-800 rounded-2xl px-6 py-4 shadow-[0_0_30px_rgba(255,255,255,0.03)]"
         >
           <h1 className="text-2xl font-bold tracking-tight">
             Rohith G
