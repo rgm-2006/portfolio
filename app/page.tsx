@@ -90,6 +90,14 @@ export default function Portfolio() {
               </a>
 
               <a
+                href="/resume.pdf"
+                download
+                className="px-6 py-3 rounded-2xl border border-zinc-700 hover:border-white transition"
+              >
+                Download Resume
+              </a>
+
+              <a
                 href="#contact"
                 className="px-6 py-3 rounded-2xl border border-zinc-700 hover:border-white transition"
               >
