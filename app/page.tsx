@@ -179,7 +179,7 @@ export default function Portfolio() {
               <motion.div
                 whileHover={{ y: -8 }}
                 key={index}
-                className="rounded-3xl border border-zinc-800 bg-zinc-950/80 backdrop-blur-xl p-8 hover:border-zinc-500 transition"
+                className="rounded-3xl border border-zinc-800 bg-zinc-950/70 backdrop-blur-xl p-8 hover:border-cyan-400/60 hover:shadow-[0_0_40px_rgba(34,211,238,0.15)] transition duration-300"
               >
                 <p className="text-zinc-500 text-sm mb-3">
                   {project.tech}
