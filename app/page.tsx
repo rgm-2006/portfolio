@@ -48,8 +48,10 @@ export default function Portfolio() {
   ];
 
   return (
-    <main className="min-h-screen bg-black text-white px-6 md:px-16 py-10 overflow-hidden">
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-white/5 blur-3xl rounded-full"></div>
+    <main className="min-h-screen bg-black text-white px-6 md:px-16 py-10 overflow-hidden relative">
+      <div className="absolute top-[-100px] left-[-100px] w-[500px] h-[500px] bg-purple-500/20 blur-3xl rounded-full animate-pulse"></div>
+
+<div className="absolute bottom-[-100px] right-[-100px] w-[500px] h-[500px] bg-cyan-500/20 blur-3xl rounded-full animate-pulse"></div>
 
       <section className="max-w-6xl mx-auto relative z-10">
         <motion.nav
