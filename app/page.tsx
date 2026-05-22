@@ -197,15 +197,15 @@ export default function Portfolio() {
 
                 <div className="w-16 h-[2px] bg-gradient-to-r from-cyan-400 to-transparent mb-6 rounded-full"></div>
 
-                <div className="flex gap-4">
-                  <button className="px-5 py-2 rounded-xl bg-white text-black font-medium">
-                    GitHub
-                  </button>
+                <div className="flex items-center justify-between pt-2">
+  <button className="px-5 py-2 rounded-xl bg-white text-black font-medium hover:scale-105 hover:shadow-[0_0_25px_rgba(255,255,255,0.25)] transition duration-300">
+    GitHub
+  </button>
 
-                  <button className="px-5 py-2 rounded-xl border border-zinc-700">
-                    Live Demo
-                  </button>
-                </div>
+  <button className="px-5 py-2 rounded-xl border border-zinc-700 hover:border-cyan-400 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.2)] transition duration-300">
+    Live Demo
+  </button>
+</div>
               </motion.div>
             ))}
           </div>
