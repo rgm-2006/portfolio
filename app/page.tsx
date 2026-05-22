@@ -195,9 +195,7 @@ export default function Portfolio() {
   {project.title}
 </h4>
 
-                <p className="text-zinc-400 leading-relaxed mb-6">
-                  {project.description}
-                </p>
+                <div className="w-16 h-[2px] bg-gradient-to-r from-cyan-400 to-transparent mb-6 rounded-full"></div>
 
                 <div className="flex gap-4">
                   <button className="px-5 py-2 rounded-xl bg-white text-black font-medium">
