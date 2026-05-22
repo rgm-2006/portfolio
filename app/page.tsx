@@ -179,7 +179,7 @@ export default function Portfolio() {
               <motion.div
                 whileHover={{ y: -8 }}
                 key={index}
-                className="rounded-3xl border border-zinc-800 bg-zinc-950/70 backdrop-blur-xl p-8 hover:border-cyan-400/60 hover:shadow-[0_0_40px_rgba(34,211,238,0.15)] transition duration-300"
+                className="group rounded-3xl border border-zinc-800 bg-zinc-950/70 backdrop-blur-xl p-8 hover:border-cyan-400/60 hover:shadow-[0_0_40px_rgba(34,211,238,0.15)] transition duration-300"
               >
                 <div className="flex items-center justify-between mb-4">
   <p className="text-cyan-300 text-sm font-medium">
@@ -191,10 +191,9 @@ export default function Portfolio() {
   </span>
 </div>
 
-                <h4 className="text-
-                2xl font-semibold mb-4">
-                  {project.title}
-                </h4>
+                <h4 className="text-2xl font-semibold mb-4 tracking-tight group-hover:text-cyan-300 transition duration-300">
+  {project.title}
+</h4>
 
                 <p className="text-zinc-400 leading-relaxed mb-6">
                   {project.description}
