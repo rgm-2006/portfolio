@@ -103,7 +103,7 @@ export default function Portfolio() {
             <div className="flex gap-4 flex-wrap">
               <a
                 href="#projects"
-                className="px-6 py-3 rounded-2xl bg-white text-black font-medium hover:scale-105 transition"
+                className="px-6 py-3 rounded-2xl bg-white text-black font-medium hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.35)] transition duration-300"
               >
                 View Projects
               </a>
@@ -181,11 +181,18 @@ export default function Portfolio() {
                 key={index}
                 className="rounded-3xl border border-zinc-800 bg-zinc-950/70 backdrop-blur-xl p-8 hover:border-cyan-400/60 hover:shadow-[0_0_40px_rgba(34,211,238,0.15)] transition duration-300"
               >
-                <p className="text-zinc-500 text-sm mb-3">
-                  {project.tech}
-                </p>
+                <div className="flex items-center justify-between mb-4">
+  <p className="text-cyan-300 text-sm font-medium">
+    {project.tech}
+  </p>
 
-                <h4 className="text-2xl font-semibold mb-4">
+  <span className="text-xs px-3 py-1 rounded-full border border-cyan-400/30 text-cyan-300 bg-cyan-400/10">
+    Featured
+  </span>
+</div>
+
+                <h4 className="text-
+                2xl font-semibold mb-4">
                   {project.title}
                 </h4>
 
@@ -258,7 +265,7 @@ export default function Portfolio() {
 
             <a
               href="https://github.com/rgm-2006"
-              className="px-6 py-3 rounded-2xl border border-zinc-700 hover:border-white transition"
+              className="px-6 py-3 rounded-2xl border border-zinc-700 hover:border-cyan-400 hover:text-cyan-300 hover:shadow-[0_0_25px_rgba(34,211,238,0.2)] transition duration-300"
             >
               GitHub
             </a>
