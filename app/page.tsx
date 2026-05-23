@@ -173,29 +173,74 @@ export default function Portfolio() {
           </motion.div>
         </section>
 
-        <motion.section
-          id="projects"
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="mb-32"
-        >
-          <h3 className="text-3xl font-bold mb-10">
-            Featured Projects
-           
+        
 <motion.section
-  initial={{ opacity: 0, y: 60 }}
+  id="projects"
+  initial={{ opacity: 0, y: 80 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 1 }}
   viewport={{ once: true }}
   className="mb-32"
 >
-  <h3 className="text-2xl font-bold mb-8 text-zinc-200">
-    Other Projects
-  </h3>
+  <motion.h3
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    viewport={{ once: true }}
+    className="text-3xl font-bold mb-10 bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent"
+  >
+    Flagship Projects
+  </motion.h3>
 
-  <div className="grid md:grid-cols-2 gap-6">
+ 
+  <div className="grid md:grid-cols-2 gap-8">
+    {projects.map((project, index) => (
+      <motion.div
+        whileHover={{ y: -8 }}
+        key={index}
+        className="group rounded-3xl border border-zinc-800 bg-zinc-950/70 backdrop-blur-xl p-8 hover:border-cyan-400/60 hover:shadow-[0_0_40px_rgba(34,211,238,0.15)] transition duration-300"
+      >
+        <div className="flex items-center justify-between mb-4">
+          <p className="text-cyan-300 text-sm font-medium">
+            {project.tech}
+          </p>
+          <span className="text-xs px-3 py-1 rounded-full border border-cyan-400/30 text-cyan-300 bg-cyan-400/10">
+            Featured
+          </span>
+        </div>
+        <h4 className="text-2xl font-semibold mb-4 tracking-tight group-hover:text-cyan-300 transition duration-300">
+          {project.title}
+        </h4>
+        <p className="text-zinc-400 leading-relaxed mb-6 text-[15px]">
+          {project.description}
+        </p>
+        <div className="w-16 h-[2px] bg-gradient-to-r from-cyan-400 to-transparent mb-6 rounded-full"></div>
+        <div className="flex items-center justify-between pt-2">
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2 rounded-xl bg-white text-black font-medium hover:scale-105 hover:shadow-[0_0_25px_rgba(255,255,255,0.25)] transition duration-300"
+          >
+            GitHub
+          </a>
+          <button className="px-5 py-2 rounded-xl border border-zinc-700 hover:border-cyan-400 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.2)] transition duration-300">
+            Live Demo
+          </button>
+        </div>
+      </motion.div>
+    ))}
+  </div>
+<motion.h3
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: 0.2 }}
+    viewport={{ once: true }}
+    className="text-2xl font-bold mt-24 mb-8 text-zinc-200"
+  >
+    Experimental Builds
+  </motion.h3>
+<div className="grid md:grid-cols-2 gap-6">
     <motion.div
       whileHover={{ y: -5 }}
       className="rounded-2xl border border-zinc-800 bg-zinc-950/60 backdrop-blur-xl p-6 hover:border-cyan-400/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.12)] transition duration-300"
@@ -203,15 +248,13 @@ export default function Portfolio() {
       <p className="text-cyan-300 text-sm mb-3">
         IoT • ESP32-S3 • Deep Learning • Solar
       </p>
-
       <h4 className="text-xl font-semibold mb-3">
         Beach Sand Grain Monitoring System
       </h4>
-
       <p className="text-zinc-400 text-sm leading-relaxed mb-5">
-        Built a solar-powered IoT system using ESP32-S3 and deep learning to autonomously monitor beach erosion and sand grain pattern changes.
+        Built a solar-powered IoT system using ESP32-S3 and deep learning to
+        autonomously monitor beach erosion and sand grain pattern changes.
       </p>
-
       <a
         href="https://github.com/rgm-2006"
         target="_blank"
@@ -221,7 +264,6 @@ export default function Portfolio() {
         View Project →
       </a>
     </motion.div>
-
     <motion.div
       whileHover={{ y: -5 }}
       className="rounded-2xl border border-zinc-800 bg-zinc-950/60 backdrop-blur-xl p-6 hover:border-cyan-400/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.12)] transition duration-300"
@@ -229,15 +271,13 @@ export default function Portfolio() {
       <p className="text-cyan-300 text-sm mb-3">
         Python • SHA-256 • Blockchain
       </p>
-
       <h4 className="text-xl font-semibold mb-3">
         Custom Blockchain Chemical Supply Tracking
       </h4>
-
       <p className="text-zinc-400 text-sm leading-relaxed mb-5">
-        Developed a custom blockchain using SHA-256 hashing to securely track chemical supply chain ownership and shipment transfers.
+        Developed a custom blockchain using SHA-256 hashing to securely track
+        chemical supply chain ownership and shipment transfers.
       </p>
-
       <a
         href="https://github.com/rgm-2006"
         target="_blank"
@@ -250,54 +290,6 @@ export default function Portfolio() {
   </div>
 </motion.section>
 
-
-          </h3>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
-              <motion.div
-                whileHover={{ y: -8 }}
-                key={index}
-                className="group rounded-3xl border border-zinc-800 bg-zinc-950/70 backdrop-blur-xl p-8 hover:border-cyan-400/60 hover:shadow-[0_0_40px_rgba(34,211,238,0.15)] transition duration-300"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <p className="text-cyan-300 text-sm font-medium">
-                    {project.tech}
-                  </p>
-
-                  <span className="text-xs px-3 py-1 rounded-full border border-cyan-400/30 text-cyan-300 bg-cyan-400/10">
-                    Featured
-                  </span>
-                </div>
-
-                <h4 className="text-2xl font-semibold mb-4 tracking-tight group-hover:text-cyan-300 transition duration-300">
-                  {project.title}
-                </h4>
-
-                <p className="text-zinc-400 leading-relaxed mb-6 text-[15px]">
-                  {project.description}
-                </p>
-
-                <div className="w-16 h-[2px] bg-gradient-to-r from-cyan-400 to-transparent mb-6 rounded-full"></div>
-
-                <div className="flex items-center justify-between pt-2">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-5 py-2 rounded-xl bg-white text-black font-medium hover:scale-105 hover:shadow-[0_0_25px_rgba(255,255,255,0.25)] transition duration-300"
-                  >
-                    GitHub
-                  </a>
-
-                  <button className="px-5 py-2 rounded-xl border border-zinc-700 hover:border-cyan-400 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.2)] transition duration-300">
-                    Live Demo
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
 
         <motion.section
           id="skills"
